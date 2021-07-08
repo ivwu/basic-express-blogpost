@@ -8,5 +8,11 @@ module.exports = (app) => {
 
   router.get("/:id", controller.findById);
 
+  // create a blog post
+  router.post("/", controller.create);
+
+  // update a blog post
+  router.put("/:id", controller.update);
+
   app.use("/api/blogposts", router);
 };

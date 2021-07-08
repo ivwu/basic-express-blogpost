@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 
+// middleware to convert requests
+app.use(express.json());
+
 app.get("/", (req, res) => {
   res.send("This is the top route in the Blog Post API");
 });

@@ -6,3 +6,73 @@ GET http://localhost:3000 HTTP/1.1
 ### GET api/student
 
 GET http://localhost:3000/api/blogposts/ HTTP/1.1
+
+### CREATE a blog post
+
+POST http://localhost:3000/api/blogposts/ HTTP/1.1
+Content-Type: application/json
+{
+  "title": "title of blog post",
+  "body": "here is a paragraph about nothing",
+  "userId": 1
+}
+
+
+### CREATE user
+
+POST http://localhost:3000/api/users/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": 20,
+  "name": "Leanne Graham",
+  "username": "Bret",
+  "email": "Sincere@april.biz",
+  "address": {
+    "street": "Kulas Light",
+    "suite": "Apt. 556",
+    "city": "Gwenborough",
+    "zipcode": "92998-3874",
+    "geo": {
+      "lat": "-37.3159",
+      "lng": "81.14ddd96"
+    }
+  },
+  "phone": "1-770-736-8031 x56442",
+  "website": "hildegard.org",
+  "company": {
+    "name": "Romaguera-Crona",
+    "catchPhrase": "Multi-layered client-server neural-net",
+    "bs": "harness real-time e-markets"
+  }
+}
+
+### Create todo
+
+POST http://localhost:3000/api/todos HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "todo title",
+  "completed": true
+}
+
+### UPDATE an existing blog post
+PUT http://localhost:3000/api/blogposts/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Our trip to Paris, France",
+  "body": "We finally saw Eiffel Tower.",
+  "userId": 2
+}
+
+### UPDATE user
+
+PUT http://localhost:3000/api/users/2 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Ivy"
+}
