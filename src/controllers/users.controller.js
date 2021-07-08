@@ -1,7 +1,8 @@
 const axios = require("axios");
 
 exports.findAll = (req, res) => {
-  axios("https://jsonplaceholder.typicode.com/users")
+  axios
+    .get("https://jsonplaceholder.typicode.com/users")
     .then((apicall) => {
       res.send(apicall.data);
     })
@@ -11,7 +12,8 @@ exports.findAll = (req, res) => {
 };
 
 exports.findById = (req, res) => {
-  axios(`https://jsonplaceholder.typicode.com/users/${req.params.id}`)
+  axios
+    .get(`https://jsonplaceholder.typicode.com/users/${req.params.id}`)
     .then((apicall) => {
       res.send(apicall.data);
     })
