@@ -14,5 +14,8 @@ module.exports = (app) => {
   // update a blog post
   router.put("/:id", controller.update);
 
+  //delete a blog post by id
+  router.delete("/:id", controller.delete);
+
   app.use("/api/blogposts", router);
 };

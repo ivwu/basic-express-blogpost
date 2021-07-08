@@ -26,3 +26,21 @@ exports.create = (req, res) => {
       res.send(apicall.data);
     });
 };
+
+exports.update = (req, res) => {
+  axios
+    .put("https://jsonplaceholder.typicode.com/todos/" + req.params.id, {
+      completed: req.body.completed,
+    })
+    .then((apicall) => {
+      res.send(apicall.data);
+    });
+};
+
+exports.delete = (req, res) => {
+  axios
+    .delete("https://jsonplaceholder.typicode.com/todos/" + req.params.id)
+    .then((apicall) => {
+      res.send(apicall.data);
+    });
+};

@@ -54,3 +54,11 @@ exports.update = (req, res) => {
       res.send(apicall.data);
     });
 };
+
+exports.delete = (req, res) => {
+  axios
+    .delete("https://jsonplaceholder.typicode.com/users/" + req.params.id)
+    .then((apicall) => {
+      res.send(apicall.data);
+    });
+};
